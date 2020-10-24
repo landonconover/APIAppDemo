@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+//static data, this should come for a database
 let initalTodos = [
     {id: 1, todo: "Buy milk.", complete: false, category: "Grocery"},
     {id: 2, todo: "Clean the cat box.", complete: false, category: "House"},
@@ -11,6 +12,7 @@ let initalTodos = [
 router.get('/', (req, res) => {
 
     res.json(initalTodos)
+
 })
 
 

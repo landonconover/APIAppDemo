@@ -1,4 +1,4 @@
-
+//function to display todos
 function displayTodos(todos) {
 
     todos.forEach(todo => {
@@ -13,15 +13,14 @@ function displayTodos(todos) {
     
 }
 
+//function to fetch todos
 async function fetchTodos() {
     const response = await fetch('http://localhost:3000/api');
     const todos = await response.json();
     return todos;
 }
 
-
-
-
-  fetchTodos().then(todos => {
+//fetch the todos and display them when they come back
+fetchTodos().then(todos => {
     displayTodos(todos)
-  });
+});
